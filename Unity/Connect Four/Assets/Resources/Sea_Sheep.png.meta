@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a175582b92b3b3c48a4bc7895fefc205
+guid: 25e02737cd24e2140ae647d87c6bcda3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sea_Bunny_0
+      name: Sea_Sheep_0
       rect:
         serializedVersion: 2
         x: 27
-        y: 299
-        width: 58
-        height: 55
+        y: 297
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e454c0b4d6c768d42bfca95fd04aa78b
-      internalID: 486371716
+      spriteID: c772acbf08b91154e9c675fa2de637a2
+      internalID: -1808731640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_1
+      name: Sea_Sheep_1
       rect:
         serializedVersion: 2
-        x: 181
-        y: 89
-        width: 285
-        height: 295
+        x: 168
+        y: 87
+        width: 306
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df6933885f8bfdc4fbd5271097861c0c
-      internalID: 1168901598
+      spriteID: 5ae061c44e1aedc4dbe0c934b16f0f78
+      internalID: 913405783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_2
+      name: Sea_Sheep_2
       rect:
         serializedVersion: 2
-        x: 521
-        y: 104
-        width: 609
-        height: 225
+        x: 577
+        y: 96
+        width: 569
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eecb0cf96e83f7f4293e20d5b644fb28
-      internalID: -1868210863
+      spriteID: 490235f62461fb54daabbf7c4f5fb6d7
+      internalID: -2007779021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_3
+      name: Sea_Sheep_3
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 255
-        width: 68
-        height: 95
+        x: 980
+        y: 42
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b49fef75f8251d84ca5a4a2978267ce4
-      internalID: -545029381
+      spriteID: 5f6f6ce6a8d6dee4e9e57b4f12985517
+      internalID: -437643764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_4
+      name: Sea_Sheep_6
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 256
-        width: 51
-        height: 98
+        x: 1151
+        y: 14
+        width: 106
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f62e6d2e20e22384c90e7395b1d5d701
-      internalID: -240481178
+      spriteID: effba585fcc167e4793cc8af077d892e
+      internalID: -1184745366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_5
+      name: Sea_Sheep_7
       rect:
         serializedVersion: 2
-        x: 885
-        y: 25
-        width: 75
-        height: 50
+        x: 1286
+        y: 15
+        width: 106
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6108b6881b042e048b02e8d494e4bc47
-      internalID: -1288689962
+      spriteID: 19b2652a16a62be449cc295431702e36
+      internalID: 468322859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_9
+      name: Sea_Sheep_4
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 34
-        width: 156
-        height: 142
+        x: 1053
+        y: 42
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,30 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4c0e2fd6086e04fa5ab445b766a06d
-      internalID: -1462699501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sea_Bunny_6
-      rect:
-        serializedVersion: 2
-        x: 1010
-        y: 25
-        width: 75
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6000ecbf6d30103428f59df0050fc173
-      internalID: 465245090
+      spriteID: c9af63307989c7948b94f389d9a8436d
+      internalID: 1291347014
       vertices: []
       indices: 
       edges: []
@@ -276,7 +254,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ddf1cb5f62125374dab14c34439bffcd
+    spriteID: 8a81b6d0dfbb7294cbeb69da19af0cbb
     internalID: 0
     vertices: []
     indices: 
@@ -286,18 +264,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sea_Bunny_0: 486371716
-      Sea_Bunny_1: 1168901598
-      Sea_Bunny_10: -356381495
-      Sea_Bunny_11: -1803880712
-      Sea_Bunny_2: -1868210863
-      Sea_Bunny_3: -545029381
-      Sea_Bunny_4: -240481178
-      Sea_Bunny_5: -1288689962
-      Sea_Bunny_6: 465245090
-      Sea_Bunny_7: -288418874
-      Sea_Bunny_8: -506440363
-      Sea_Bunny_9: -1462699501
+      Sea_Sheep_0: -1808731640
+      Sea_Sheep_1: 913405783
+      Sea_Sheep_2: -2007779021
+      Sea_Sheep_3: -437643764
+      Sea_Sheep_4: 1291347014
+      Sea_Sheep_5: 1996534116
+      Sea_Sheep_6: -1184745366
+      Sea_Sheep_7: 468322859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

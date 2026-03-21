@@ -20,8 +20,9 @@ public class Framework : MonoBehaviour
         _pi = GetComponent<PlayerInput>();
         _shoot = _pi.actions["Shoot"];
         _shoot.started += ctx => Shoot();
-        //Toss Coin who begins
-        //Let that Player begin
+
+        int toinCoss = UnityEngine.Random.Range(0,2);
+        if(toinCoss == 1) playerOneTurn = false;
     }
 
     public void Shoot() {
@@ -38,8 +39,8 @@ public class Framework : MonoBehaviour
             else if(hit.point.x <= 1.5f) c = 4;
             else if(hit.point.x <= 3.5f) c = 5;
             else if(hit.point.x <= 5.5f) c = 6;
-            else if(hit.point.x >= 7.5f) c = 7;
-            Debug.Log(hit.point);
+            else c = 7;
+            //Debug.Log(hit.point);
             InputObject(c);
         }
     }
@@ -63,15 +64,52 @@ public class Framework : MonoBehaviour
                 Vector3 destination = new Vector3(-7 + column*2,-4 + 2*i, 0);
                 g.GetComponent<Ball>().SetTarget(destination);
                 playerOneTurn = !playerOneTurn;
+                currentTurn++;
+                CheckWinAndDraw();
                 return true;
             }
         }
+
+        //Feedback das Reihe voll
         return false;
     }
 
     public void CheckWinAndDraw()
     {
-        //Go Through all fields and check if any player has won or if it is a draw, if yes enable end screen
+        for(int i = 0; i < fields.GetLength(0); i++)
+        {
+            for(int y = 0; y < fields.GetLength(1); y++)
+            {
+                if(fields[i, y] == field.empty) continue;
+
+                if(CheckDirection(i,y,1,0, fields[i,y]) || CheckDirection(i,y,0,1, fields[i,y]) || CheckDirection(i,y,1,1, fields[i,y]) || CheckDirection(i,y,-1,1, fields[i,y]))
+                {
+                    //fields[i,y] won
+                    if(fields[i,y] == field.playerOne) Debug.Log("Player 1 Won");
+                    if(fields[i,y] == field.playerTwo) Debug.Log("Player 2 Won");
+                    return;
+                }
+            }
+        }
+
+        if(currentTurn == 40)
+        {
+            //Draw
+            Debug.Log("Draw");
+        }
+    }
+
+    private bool CheckDirection(int widthPos, int heightPos, int widthDirection, int heightDirection, field fieldType)
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            int w = widthPos + i * widthDirection;
+            int h = heightPos + i * heightDirection;
+            if(w < 0 || w >= fields.GetLength(0) || h < 0 || h >= fields.GetLength(1)) return false;
+
+            if(fields[w,h] != fieldType) return false;
+        }
+        return true;
     }
 }
 
