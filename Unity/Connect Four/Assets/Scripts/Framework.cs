@@ -1,22 +1,34 @@
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Framework : MonoBehaviour
 {
+    //Player
     public GameObject ballPlayerOne;
-    public GameObject ballPlayerTwo;
     public GameObject characterPlayerOne;
+    public GameObject ballPlayerTwo;
     public GameObject characterPlayerTwo;
+    //UI
+    public TextMeshProUGUI turnText;
+    public GameObject endScreen;
+    public TextMeshProUGUI endText;
+    public TextMeshProUGUI fact;
+    //Others
     public PlayerInput _pi;
     private InputAction _shoot;
     public field[,] fields = new field[8,5];
     public int currentTurn = 0;
     public bool playerOneTurn = true;
+    public bool isOver = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Instantiate(characterPlayerOne, new Vector3(-6.5f, 6.1f, 1f), Quaternion.identity);
+        Instantiate(characterPlayerTwo, new Vector3(6.5f, 6.1f, 1f), Quaternion.Euler(0, -180, 0));
+
         _pi = GetComponent<PlayerInput>();
         _shoot = _pi.actions["Shoot"];
         _shoot.started += ctx => Shoot();
@@ -26,6 +38,7 @@ public class Framework : MonoBehaviour
     }
 
     public void Shoot() {
+        if(isOver) return;
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
@@ -65,6 +78,8 @@ public class Framework : MonoBehaviour
                 g.GetComponent<Ball>().SetTarget(destination);
                 playerOneTurn = !playerOneTurn;
                 currentTurn++;
+                turnText.text = "Turn " + currentTurn;
+                //Include short wait time before next turn and check
                 CheckWinAndDraw();
                 return true;
             }
@@ -84,9 +99,9 @@ public class Framework : MonoBehaviour
 
                 if(CheckDirection(i,y,1,0, fields[i,y]) || CheckDirection(i,y,0,1, fields[i,y]) || CheckDirection(i,y,1,1, fields[i,y]) || CheckDirection(i,y,-1,1, fields[i,y]))
                 {
-                    //fields[i,y] won
-                    if(fields[i,y] == field.playerOne) Debug.Log("Player 1 Won");
-                    if(fields[i,y] == field.playerTwo) Debug.Log("Player 2 Won");
+                    string message = "Player 1 Won";
+                    if(fields[i,y] == field.playerTwo) message = "Player 2 Won"; 
+                    EndGame(message, "");
                     return;
                 }
             }
@@ -94,8 +109,7 @@ public class Framework : MonoBehaviour
 
         if(currentTurn == 40)
         {
-            //Draw
-            Debug.Log("Draw");
+             EndGame("Draw", null);
         }
     }
 
@@ -110,6 +124,16 @@ public class Framework : MonoBehaviour
             if(fields[w,h] != fieldType) return false;
         }
         return true;
+    }
+
+    public void EndGame(string message,  string? factText)
+    {
+        isOver = true;
+        endScreen.SetActive(true);
+        endText.text = message;
+
+        if(factText == null) fact.gameObject.SetActive(false);
+        else fact.GetComponentInChildren<TextMeshProUGUI>().text = factText;
     }
 }
 
