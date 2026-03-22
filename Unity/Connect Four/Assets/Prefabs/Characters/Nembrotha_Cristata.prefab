@@ -48,7 +48,7 @@ MonoBehaviour:
   charBall: {fileID: 6643399774843729411, guid: 8becadb5fd2d34144aee9a49104a6910, type: 3}
   charPlayer: {fileID: 3117491785884957372, guid: 6edff8229e1217f49a68d5b8ea9cb7f6, type: 3}
   charParticle: {fileID: 0}
-  charColor: {r: 0.54901963, g: 0.7176471, b: 0.59607846, a: 1}
+  charColor: {r: 0.654902, g: 0.9372549, b: 0.73333335, a: 1}
   charFacts:
   - Nembrotha cristata can grow up to 50mm long.
   - Nembrotha cristata live in depths between 3 and 20 metres in the Indo-West Pacific

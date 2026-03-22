@@ -48,7 +48,7 @@ MonoBehaviour:
   charBall: {fileID: 79985340403338401, guid: 5d7c19d2faf10e647b8c88a5d6b24e16, type: 3}
   charPlayer: {fileID: 6634315777915232072, guid: 39357a63495437741aa0d1ab5144cd33, type: 3}
   charParticle: {fileID: 0}
-  charColor: {r: 0.78823537, g: 0.7686275, b: 0.77647066, a: 1}
+  charColor: {r: 0.9372549, g: 0.90588236, b: 0.90588236, a: 1}
   charFacts:
   - Sea bunnies grow to about 2.53 cm on average.
   - The furry texture of the sea bunnies body is used for sensory functions.

@@ -23,10 +23,8 @@ public class Framework : MonoBehaviour
     public bool playerOneTurn = true;
     public bool isOver = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        turnText.transform.parent.gameObject.SetActive(true);
         playerOneName.transform.parent.gameObject.SetActive(true);
         playerTwoName.transform.parent.gameObject.SetActive(true);
 
@@ -40,6 +38,11 @@ public class Framework : MonoBehaviour
         playerOneName.color = playerOne.charColor;
         playerTwoName.text = playerTwo.charName;
         playerTwoName.color = playerTwo.charColor;
+
+        turnText.transform.parent.gameObject.SetActive(true);
+        if(playerOneTurn) turnText.color = playerOne.charColor;
+        else turnText.color = playerTwo.charColor;
+        //Add sunbeam
 
         _pi = GetComponent<PlayerInput>();
         _shoot = _pi.actions["Shoot"];
@@ -85,10 +88,14 @@ public class Framework : MonoBehaviour
                 GameObject g = Instantiate((playerOneTurn == true) ? playerOne.charBall : playerTwo.charBall, spawnPoint, quaternion.identity);
                 Vector3 destination = new Vector3(-7 + column*2,-4 + 2*i, 0);
                 g.GetComponent<Ball>().SetTarget(destination);
+
                 playerOneTurn = !playerOneTurn;
                 currentTurn++;
                 turnText.text = "Turn " + currentTurn;
-                //Include short wait time before next turn and check
+                if(playerOneTurn) turnText.color = playerOne.charColor;
+                else turnText.color = playerTwo.charColor;
+                //Add Sunbeam
+
                 CheckWinAndDraw();
                 return true;
             }

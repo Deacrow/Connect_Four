@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -424,7 +424,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: be11feff6e2bfeff1cbffeff76bffeffd0bffeff6ec0feff04c3feff66a9ffffbcdfffff10fbffff3aae000054ae000066ae000076ae00008cae0000c6ae0000e4ae0000f4ae0000
+      m_ExpandedIDs: e6dfffff10fbffff5cae000072ae00008cae000098ae0000baae00000eaf00003aaf000048af000054af0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1060,9 +1060,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.7345683, y: 0.69654495, z: 0.98677576}
+    m_Target: {x: -1.000174, y: 4.630788, z: 1.0180061}
     speed: 2
-    m_Value: {x: 0.7345683, y: 0.69654495, z: 0.98677576}
+    m_Value: {x: -1.000174, y: 4.630788, z: 1.0180061}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1112,9 +1112,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.00000009234641, y: 0.008999856, z: 0.0000000016880551, w: 0.9999595}
   m_Size:
-    m_Target: 7.621834
+    m_Target: 7.4085746
     speed: 2
-    m_Value: 7.621834
+    m_Value: 7.4085746
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3811,7 +3811,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -3821,7 +3821,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Sven\Desktop\Programme\Projekte\Connect Four\Unity\Connect
     Four
@@ -3829,10 +3829,10 @@ MonoBehaviour:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b6b10000
-    m_LastClickedID: 45494
-    m_ExpandedIDs: 0000000052b10000b4b1000000ca9a3b
+    scrollPos: {x: 0, y: 19.333313}
+    m_SelectedIDs: 6ab30000
+    m_LastClickedID: 45930
+    m_ExpandedIDs: 000000000ab3000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3861,7 +3861,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000052b10000
+    m_ExpandedIDs: 000000000ab30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3890,7 +3890,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c2aa000028a9000026a900006eab0000
+    m_ExpandedInstanceIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c2aa000028a9000026a900006eab0000a0b30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

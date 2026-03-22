@@ -48,7 +48,7 @@ MonoBehaviour:
   charBall: {fileID: 8664791725523261532, guid: 1c98679bf6983ba4fa7e90cf8f88d0da, type: 3}
   charPlayer: {fileID: 101299452100883392, guid: d8612ed4b1aa00447ac275e804b9f91a, type: 3}
   charParticle: {fileID: 0}
-  charColor: {r: 0.72156864, g: 0.54901963, b: 0, a: 1}
+  charColor: {r: 0.98039216, g: 0.6313726, b: 0, a: 1}
   charFacts:
   - 'Thecacera pacifica is also known as Pikachu nudibranch due to its similarities. '
   - The diet of thecacera pacifica consists of moss animals and they live in a depth
