@@ -6,15 +6,15 @@ using UnityEngine.InputSystem;
 public class Framework : MonoBehaviour
 {
     //Player
-    public GameObject ballPlayerOne;
-    public GameObject characterPlayerOne;
-    public GameObject ballPlayerTwo;
-    public GameObject characterPlayerTwo;
+    public Character playerOne;
+    public Character playerTwo;
     //UI
     public TextMeshProUGUI turnText;
     public GameObject endScreen;
     public TextMeshProUGUI endText;
     public TextMeshProUGUI fact;
+    public TextMeshProUGUI playerOneName;
+    public TextMeshProUGUI playerTwoName;
     //Others
     public PlayerInput _pi;
     private InputAction _shoot;
@@ -26,15 +26,24 @@ public class Framework : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instantiate(characterPlayerOne, new Vector3(-6.5f, 6.1f, 1f), Quaternion.identity);
-        Instantiate(characterPlayerTwo, new Vector3(6.5f, 6.1f, 1f), Quaternion.Euler(0, -180, 0));
+        turnText.transform.parent.gameObject.SetActive(true);
+        playerOneName.transform.parent.gameObject.SetActive(true);
+        playerTwoName.transform.parent.gameObject.SetActive(true);
+
+        playerOne = GameObject.FindGameObjectWithTag("playerOne").GetComponent<Character>();
+        playerTwo = GameObject.FindGameObjectWithTag("playerTwo").GetComponent<Character>();
+
+        Instantiate(playerOne.charPlayer, new Vector3(-6.5f, 6.1f, 1f), Quaternion.identity);
+        Instantiate(playerTwo.charPlayer, new Vector3(6.5f, 6.1f, 1f), Quaternion.Euler(0, -180, 0));
+
+        playerOneName.text = playerOne.charName;
+        playerOneName.color = playerOne.charColor;
+        playerTwoName.text = playerTwo.charName;
+        playerTwoName.color = playerTwo.charColor;
 
         _pi = GetComponent<PlayerInput>();
         _shoot = _pi.actions["Shoot"];
         _shoot.started += ctx => Shoot();
-
-        int toinCoss = UnityEngine.Random.Range(0,2);
-        if(toinCoss == 1) playerOneTurn = false;
     }
 
     public void Shoot() {
@@ -73,7 +82,7 @@ public class Framework : MonoBehaviour
                     fields[column, i] = field.playerTwo;
                 }
                 Vector3 spawnPoint = new Vector3(-7 + column*2, 8, 0);
-                GameObject g = Instantiate((playerOneTurn == true) ? ballPlayerOne : ballPlayerTwo, spawnPoint, quaternion.identity);
+                GameObject g = Instantiate((playerOneTurn == true) ? playerOne.charBall : playerTwo.charBall, spawnPoint, quaternion.identity);
                 Vector3 destination = new Vector3(-7 + column*2,-4 + 2*i, 0);
                 g.GetComponent<Ball>().SetTarget(destination);
                 playerOneTurn = !playerOneTurn;
@@ -99,9 +108,7 @@ public class Framework : MonoBehaviour
 
                 if(CheckDirection(i,y,1,0, fields[i,y]) || CheckDirection(i,y,0,1, fields[i,y]) || CheckDirection(i,y,1,1, fields[i,y]) || CheckDirection(i,y,-1,1, fields[i,y]))
                 {
-                    string message = "Player 1 Won";
-                    if(fields[i,y] == field.playerTwo) message = "Player 2 Won"; 
-                    EndGame(message, "");
+                    EndGame(fields[i,y] == field.playerOne ? true : false);
                     return;
                 }
             }
@@ -109,7 +116,7 @@ public class Framework : MonoBehaviour
 
         if(currentTurn == 40)
         {
-             EndGame("Draw", null);
+             EndGame(null);
         }
     }
 
@@ -126,14 +133,31 @@ public class Framework : MonoBehaviour
         return true;
     }
 
-    public void EndGame(string message,  string? factText)
+    public void EndGame(bool? playerOneWon)
     {
         isOver = true;
         endScreen.SetActive(true);
-        endText.text = message;
-
-        if(factText == null) fact.gameObject.SetActive(false);
-        else fact.GetComponentInChildren<TextMeshProUGUI>().text = factText;
+        if(playerOneWon == null)
+        { 
+            endText.text = "Draw!";
+            fact.gameObject.SetActive(false);
+        }
+        else if ((bool)playerOneWon)
+        {
+            endText.text = playerOne.charName + " Won!"; 
+            endText.color = playerOne.charColor; 
+            fact.color = playerOne.charColor; 
+            fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerOne.charFacts[UnityEngine.Random.Range(0,playerOne.charFacts.Length)];
+            fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = playerOne.charColor;  
+        }
+        else
+        {
+            endText.text = playerTwo.charName + " Won!"; 
+            endText.color = playerTwo.charColor; 
+            fact.color = playerTwo.charColor; 
+            fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerTwo.charFacts[UnityEngine.Random.Range(0,playerTwo.charFacts.Length)];
+            fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = playerTwo.charColor; 
+        }
     }
 }
 
