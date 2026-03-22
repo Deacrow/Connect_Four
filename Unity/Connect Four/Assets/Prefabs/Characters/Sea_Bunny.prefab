@@ -47,7 +47,7 @@ MonoBehaviour:
   charName: Sea Bunny
   charBall: {fileID: 79985340403338401, guid: 5d7c19d2faf10e647b8c88a5d6b24e16, type: 3}
   charPlayer: {fileID: 6634315777915232072, guid: 39357a63495437741aa0d1ab5144cd33, type: 3}
-  charParticle: {fileID: 0}
+  charParticle: {fileID: 4241961762477692791, guid: f0955ba95103cfe4b832edbdf3aa85fd, type: 3}
   charColor: {r: 0.9372549, g: 0.90588236, b: 0.90588236, a: 1}
   charFacts:
   - Sea bunnies grow to about 2.53 cm on average.

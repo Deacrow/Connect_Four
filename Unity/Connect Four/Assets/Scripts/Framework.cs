@@ -19,6 +19,7 @@ public class Framework : MonoBehaviour
     public PlayerInput _pi;
     private InputAction _shoot;
     public field[,] fields = new field[8,5];
+    public GameObject[] sunBeams;
     public int currentTurn = 0;
     public bool playerOneTurn = true;
     public bool isOver = false;
@@ -39,10 +40,7 @@ public class Framework : MonoBehaviour
         playerTwoName.text = playerTwo.charName;
         playerTwoName.color = playerTwo.charColor;
 
-        turnText.transform.parent.gameObject.SetActive(true);
-        if(playerOneTurn) turnText.color = playerOne.charColor;
-        else turnText.color = playerTwo.charColor;
-        //Add sunbeam
+        SetTurnCounter();
 
         _pi = GetComponent<PlayerInput>();
         _shoot = _pi.actions["Shoot"];
@@ -57,13 +55,13 @@ public class Framework : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             int c = 0;
-            if(hit.point.x <= -6.5f) c = 0;
-            else if(hit.point.x <= -4.5f) c = 1;
-            else if(hit.point.x <= -2.5f) c = 2;
-            else if(hit.point.x <= -0.5f) c = 3;
-            else if(hit.point.x <= 1.5f) c = 4;
-            else if(hit.point.x <= 3.5f) c = 5;
-            else if(hit.point.x <= 5.5f) c = 6;
+            if(hit.point.x <= -6.6f) c = 0;
+            else if(hit.point.x <= -4.4f) c = 1;
+            else if(hit.point.x <= -2.2f) c = 2;
+            else if(hit.point.x <= -0.0f) c = 3;
+            else if(hit.point.x <= 2.2) c = 4;
+            else if(hit.point.x <= 4.4f) c = 5;
+            else if(hit.point.x <= 6.6f) c = 6;
             else c = 7;
             //Debug.Log(hit.point);
             InputObject(c);
@@ -84,17 +82,14 @@ public class Framework : MonoBehaviour
                 {
                     fields[column, i] = field.playerTwo;
                 }
-                Vector3 spawnPoint = new Vector3(-7 + column*2, 8, 0);
+                Vector3 spawnPoint = new Vector3(-6.86f + column*1.96f, 8, 0);
                 GameObject g = Instantiate((playerOneTurn == true) ? playerOne.charBall : playerTwo.charBall, spawnPoint, quaternion.identity);
-                Vector3 destination = new Vector3(-7 + column*2,-4 + 2*i, 0);
+                Vector3 destination = new Vector3(-6.86f + column*1.96f,-3.9f + i*1.96f, 0);
                 g.GetComponent<Ball>().SetTarget(destination);
 
                 playerOneTurn = !playerOneTurn;
                 currentTurn++;
-                turnText.text = "Turn " + currentTurn;
-                if(playerOneTurn) turnText.color = playerOne.charColor;
-                else turnText.color = playerTwo.charColor;
-                //Add Sunbeam
+                SetTurnCounter();
 
                 CheckWinAndDraw();
                 return true;
@@ -140,6 +135,13 @@ public class Framework : MonoBehaviour
         return true;
     }
 
+    public void SetTurnCounter()
+    {
+        turnText.transform.parent.gameObject.SetActive(true);
+        if(playerOneTurn) { turnText.color = playerOne.charColor; sunBeams[0].SetActive(true); sunBeams[1].SetActive(false);}
+        else { turnText.color = playerTwo.charColor;  sunBeams[1].SetActive(true); sunBeams[0].SetActive(false);}
+    }
+
     public void EndGame(bool? playerOneWon)
     {
         isOver = true;
@@ -155,7 +157,8 @@ public class Framework : MonoBehaviour
             endText.color = playerOne.charColor; 
             fact.color = playerOne.charColor; 
             fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerOne.charFacts[UnityEngine.Random.Range(0,playerOne.charFacts.Length)];
-            fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = playerOne.charColor;  
+            fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = playerOne.charColor; 
+            Instantiate(playerOne.charParticle);
         }
         else
         {
@@ -164,6 +167,7 @@ public class Framework : MonoBehaviour
             fact.color = playerTwo.charColor; 
             fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerTwo.charFacts[UnityEngine.Random.Range(0,playerTwo.charFacts.Length)];
             fact.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = playerTwo.charColor; 
+            Instantiate(playerTwo.charParticle);
         }
     }
 }

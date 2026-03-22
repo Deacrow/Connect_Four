@@ -100,5 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf701d7624015d448132e062bef27ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   target: {x: 0, y: 0, z: 0}
+  charParticle: {fileID: 5348202607234379213, guid: 0f2e9af185a856e40adeb2a1a17e5061, type: 3}

@@ -47,7 +47,7 @@ MonoBehaviour:
   charName: Sea Sheep
   charBall: {fileID: 79985340403338401, guid: 4ff7f1b340579d84983ed6feecd10dfb, type: 3}
   charPlayer: {fileID: 1751704678382255885, guid: 08dc86e23f7c0d94189ce1f1530cc901, type: 3}
-  charParticle: {fileID: 0}
+  charParticle: {fileID: 5348202607234379213, guid: 0f2e9af185a856e40adeb2a1a17e5061, type: 3}
   charColor: {r: 0.48235294, g: 0.8627451, b: 0.26666668, a: 1}
   charFacts:
   - Sea sheeps can grow up to 10mm.
