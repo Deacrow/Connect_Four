@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class Framework : MonoBehaviour
     private InputAction _shoot;
     public field[,] fields = new field[8,5];
     public GameObject[] sunBeams;
+    public GameObject wrongField;
+    public GameObject backgroundFish;
     public int currentTurn = 0;
     public bool playerOneTurn = true;
     public bool isOver = false;
@@ -41,6 +44,7 @@ public class Framework : MonoBehaviour
         playerTwoName.color = playerTwo.charColor;
 
         SetTurnCounter();
+        StartCoroutine(SpawnFish(1f));
 
         _pi = GetComponent<PlayerInput>();
         _shoot = _pi.actions["Shoot"];
@@ -86,6 +90,7 @@ public class Framework : MonoBehaviour
                 GameObject g = Instantiate((playerOneTurn == true) ? playerOne.charBall : playerTwo.charBall, spawnPoint, quaternion.identity);
                 Vector3 destination = new Vector3(-6.86f + column*1.96f,-3.9f + i*1.96f, 0);
                 g.GetComponent<Ball>().SetTarget(destination);
+                SoundManager.PlaySound(Sounds.Shoot);
 
                 playerOneTurn = !playerOneTurn;
                 currentTurn++;
@@ -96,7 +101,7 @@ public class Framework : MonoBehaviour
             }
         }
 
-        //Feedback das Reihe voll
+        wrongField.GetComponent<Animator>().SetTrigger("Wrong");
         return false;
     }
 
@@ -140,12 +145,14 @@ public class Framework : MonoBehaviour
         turnText.transform.parent.gameObject.SetActive(true);
         if(playerOneTurn) { turnText.color = playerOne.charColor; sunBeams[0].SetActive(true); sunBeams[1].SetActive(false);}
         else { turnText.color = playerTwo.charColor;  sunBeams[1].SetActive(true); sunBeams[0].SetActive(false);}
+        turnText.text = "Turn " + currentTurn;
     }
 
     public void EndGame(bool? playerOneWon)
     {
         isOver = true;
         endScreen.SetActive(true);
+        SoundManager.PlaySound(Sounds.Victory);
         if(playerOneWon == null)
         { 
             endText.text = "Draw!";
@@ -170,7 +177,21 @@ public class Framework : MonoBehaviour
             Instantiate(playerTwo.charParticle);
         }
     }
+
+    public IEnumerator SpawnFish(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        for(int i = 0; i < UnityEngine.Random.Range(1,2); i++)
+        {
+            int z = UnityEngine.Random.Range(0,2);
+            if(z == 0) z = 15; else z = -15;
+            Instantiate(backgroundFish, new Vector3(z,UnityEngine.Random.Range(-5f, 7f), 0), quaternion.identity);
+        }
+        StartCoroutine(SpawnFish(13f));
+    }
 }
+
 
 public enum field
 {

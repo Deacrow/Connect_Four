@@ -18,6 +18,7 @@ public class CoinFlip : MonoBehaviour
         sides[1] = GameObject.FindGameObjectWithTag("playerTwo").GetComponent<Character>().charBall.GetComponent<SpriteRenderer>().sprite;
 
         StartCoroutine(Flipping(dur, startSize, Random.Range(5, 10)));
+        SoundManager.PlaySound(Sounds.CoinToss);
     }
 
     void Awake() 
@@ -57,6 +58,7 @@ public class CoinFlip : MonoBehaviour
             flipCount++;
         }
         StartCoroutine(ShowResult(1.5f));
+        SoundManager.PlaySound(Sounds.CoinRes);
         startText.gameObject.SetActive(true);
         if(flipCount % 2 == 0) {startText.color = GameObject.FindGameObjectWithTag("playerTwo").GetComponent<Character>().charColor; startText.text = GameObject.FindGameObjectWithTag("playerTwo").GetComponent<Character>().charName + " Starts!"; }
         else {startText.color = GameObject.FindGameObjectWithTag("playerOne").GetComponent<Character>().charColor; startText.text = GameObject.FindGameObjectWithTag("playerOne").GetComponent<Character>().charName + " Starts!"; }

@@ -25,6 +25,7 @@ public class Ball : MonoBehaviour
             GameObject g = Instantiate(charParticle, transform.position, quaternion.identity);
             g.transform.parent = this.transform;
             StartCoroutine(DestroyParticleSystem(0.3f));
+            SoundManager.PlaySound(Sounds.BallInPlace);
             charParticle = g;
             isDone = true;
         }
