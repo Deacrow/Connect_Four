@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a175582b92b3b3c48a4bc7895fefc205
+guid: 135c39161f6a46943b062fc50671336c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sea_Bunny_0
+      name: Nembrotha_Cristata_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 299
-        width: 58
-        height: 55
+        x: 22
+        y: 302
+        width: 56
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f2ff6443e36df94191b355e69f41f57
-      internalID: -811462976
+      spriteID: c290c2d584cc9e741a88dd35dd57e4a3
+      internalID: -2046504228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_1
+      name: Nembrotha_Cristata_1
       rect:
         serializedVersion: 2
-        x: 181
-        y: 89
-        width: 285
-        height: 295
+        x: 147
+        y: 97
+        width: 268
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcebbf7b0beabe744a621f8591eb8faf
-      internalID: -495880946
+      spriteID: bdd71456197689b4088d4dd0d931f707
+      internalID: 1442106403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_2
+      name: Nembrotha_Cristata_2
       rect:
         serializedVersion: 2
-        x: 521
-        y: 104
-        width: 609
-        height: 225
+        x: 463
+        y: 102
+        width: 691
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83f83c970054e8e4685876cda32e1901
-      internalID: 1723552860
+      spriteID: de1a7aee604189c468b64d396b03b976
+      internalID: -414584393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_3
+      name: Nembrotha_Cristata_3
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 255
-        width: 68
-        height: 95
+        x: 1202
+        y: 243
+        width: 49
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29f557b2fab85504ab518b062d7f7e6a
-      internalID: 571982509
+      spriteID: d729d5c4d21f27944b05a2c39dd8d8a3
+      internalID: 741401417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_4
+      name: Nembrotha_Cristata_4
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 256
-        width: 51
-        height: 98
+        x: 1295
+        y: 241
+        width: 43
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e33213ef486c8d944b1fad2e9e3db065
-      internalID: -1710099745
+      spriteID: a36e54e4ebcb03a47a15d758d2b91eb2
+      internalID: -1133345646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_5
+      name: Nembrotha_Cristata_5
       rect:
         serializedVersion: 2
-        x: 878
-        y: 22
-        width: 80
-        height: 50
+        x: 935
+        y: 52
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e6e8cc4f4e873441bb75530d5d21e47
-      internalID: -1155954447
+      spriteID: c7f211be48d1fd846a43563e08781b8e
+      internalID: 30155702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_7
+      name: Nembrotha_Cristata_6
       rect:
         serializedVersion: 2
-        x: 1007
-        y: 22
-        width: 80
-        height: 50
+        x: 991
+        y: 52
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fc57dbbd40f64449b65ad358798f658
-      internalID: 230090392
+      spriteID: fd8d71559937c6642994824aade5c13a
+      internalID: 1918452682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_9
+      name: Nembrotha_Cristata_7
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 34
-        width: 156
-        height: 142
+        x: 1150
+        y: 10
+        width: 198
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a0feb89ab1cf743b2ec3adc0560cea
-      internalID: -814021238
+      spriteID: db1fb16bf59dbcd4385b56416fcc125d
+      internalID: 1793332959
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8005b5b27ffaef4d86bb2c747d006a0
+    spriteID: fb8cbd51b2eb56d42a2b8297d1baa596
     internalID: 0
     vertices: []
     indices: 
@@ -286,18 +286,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sea_Bunny_0: -811462976
-      Sea_Bunny_1: -495880946
-      Sea_Bunny_10: -433495653
-      Sea_Bunny_11: -1121610781
-      Sea_Bunny_2: 1723552860
-      Sea_Bunny_3: 571982509
-      Sea_Bunny_4: -1710099745
-      Sea_Bunny_5: -1155954447
-      Sea_Bunny_6: 1168224274
-      Sea_Bunny_7: 230090392
-      Sea_Bunny_8: 1222140376
-      Sea_Bunny_9: -814021238
+      Nembrotha_Cristata_0: -2046504228
+      Nembrotha_Cristata_1: 1442106403
+      Nembrotha_Cristata_2: -414584393
+      Nembrotha_Cristata_3: 741401417
+      Nembrotha_Cristata_4: -1133345646
+      Nembrotha_Cristata_5: 30155702
+      Nembrotha_Cristata_6: 1918452682
+      Nembrotha_Cristata_7: 1793332959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

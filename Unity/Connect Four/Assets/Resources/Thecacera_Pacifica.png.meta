@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a175582b92b3b3c48a4bc7895fefc205
+guid: b50d9bcf6bd068245850c404d4d7b7e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,177 +97,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sea_Bunny_0
+      name: Thecacera_Pacifica_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 299
-        width: 58
-        height: 55
+        x: 29
+        y: 301
+        width: 56
+        height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f2ff6443e36df94191b355e69f41f57
-      internalID: -811462976
+      spriteID: 9b4e2802220b2f54c835e225830aab26
+      internalID: -452215661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_1
+      name: Thecacera_Pacifica_1
       rect:
         serializedVersion: 2
-        x: 181
-        y: 89
-        width: 285
-        height: 295
+        x: 202
+        y: 91
+        width: 259
+        height: 260
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcebbf7b0beabe744a621f8591eb8faf
-      internalID: -495880946
+      spriteID: 98ebdb29cf02f4b4a9da9de1ae2a3cf1
+      internalID: -1264983223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_2
+      name: Thecacera_Pacifica_2
       rect:
         serializedVersion: 2
-        x: 521
-        y: 104
-        width: 609
-        height: 225
+        x: 1163
+        y: 251
+        width: 67
+        height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83f83c970054e8e4685876cda32e1901
-      internalID: 1723552860
+      spriteID: 9e89cdb2d6326d349be87b6e5968fdf2
+      internalID: -2032600328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_3
+      name: Thecacera_Pacifica_3
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 255
-        width: 68
-        height: 95
+        x: 1279
+        y: 262
+        width: 90
+        height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29f557b2fab85504ab518b062d7f7e6a
-      internalID: 571982509
+      spriteID: be0e277352e4f754185feb14fa0d3ccf
+      internalID: -1954784184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_4
+      name: Thecacera_Pacifica_4
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 256
-        width: 51
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 498
+        y: 99
+        width: 636
+        height: 125
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e33213ef486c8d944b1fad2e9e3db065
-      internalID: -1710099745
+      spriteID: 53d80904c269e57489140aab2ec3d615
+      internalID: -972011889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_5
+      name: Thecacera_Pacifica_5
       rect:
         serializedVersion: 2
-        x: 878
-        y: 22
-        width: 80
-        height: 50
+        x: 1178
+        y: 18
+        width: 90
+        height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e6e8cc4f4e873441bb75530d5d21e47
-      internalID: -1155954447
+      spriteID: 3aae90e8bf3ec374e9e9c23b207bc344
+      internalID: -911434392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_7
+      name: Thecacera_Pacifica_6
       rect:
         serializedVersion: 2
-        x: 1007
-        y: 22
-        width: 80
-        height: 50
+        x: 1291
+        y: 19
+        width: 69
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fc57dbbd40f64449b65ad358798f658
-      internalID: 230090392
+      spriteID: af617e28998470245b28b8bf7265595f
+      internalID: 483716981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sea_Bunny_9
+      name: Thecacera_Pacifica_7
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 34
-        width: 156
-        height: 142
+        x: 767
+        y: 7
+        width: 56
+        height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a0feb89ab1cf743b2ec3adc0560cea
-      internalID: -814021238
+      spriteID: 5fcfcfdce4a3dfa4a92d2952f471f8cd
+      internalID: 1216686682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thecacera_Pacifica_8
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 40
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc82fcceb309c94b9991958108b89de
+      internalID: 1226756675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thecacera_Pacifica_9
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 40
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1f177755fc1934784672bb9ad3bbe5
+      internalID: 477428046
       vertices: []
       indices: 
       edges: []
@@ -276,7 +320,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8005b5b27ffaef4d86bb2c747d006a0
+    spriteID: 311c1c88121be3d42a33c5918cfa4def
     internalID: 0
     vertices: []
     indices: 
@@ -286,18 +330,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sea_Bunny_0: -811462976
-      Sea_Bunny_1: -495880946
-      Sea_Bunny_10: -433495653
-      Sea_Bunny_11: -1121610781
-      Sea_Bunny_2: 1723552860
-      Sea_Bunny_3: 571982509
-      Sea_Bunny_4: -1710099745
-      Sea_Bunny_5: -1155954447
-      Sea_Bunny_6: 1168224274
-      Sea_Bunny_7: 230090392
-      Sea_Bunny_8: 1222140376
-      Sea_Bunny_9: -814021238
+      Thecacera_Pacifica_0: -452215661
+      Thecacera_Pacifica_1: -1264983223
+      Thecacera_Pacifica_2: -2032600328
+      Thecacera_Pacifica_3: -1954784184
+      Thecacera_Pacifica_4: -972011889
+      Thecacera_Pacifica_5: -911434392
+      Thecacera_Pacifica_6: 483716981
+      Thecacera_Pacifica_7: 1216686682
+      Thecacera_Pacifica_8: 1226756675
+      Thecacera_Pacifica_9: 477428046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
